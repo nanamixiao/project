@@ -71,31 +71,34 @@ int main() {
 ## Task 2
 ``` cpp
 
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
-int findMissingNumber(vector<int> nums) {
-    int actual_sum = 0;
-    int max_value = 0;
+int find(vector<int> nums) {
 
-    for (int i = 0; i < nums.size(); i++) {
-        actual_sum += nums[i];
-        if (nums[i] > max_value) {
-            max_value = nums[i];
-        }
+    int n = nums.size();
+
+    int expected = n * (n + 1) / 2;
+
+    int actual = 0;
+
+
+    for (int i = 0; i < n; i++) {
+
+        actual += nums[i];
     }
 
-    int expected_sum = (max_value * (max_value + 1)) / 2;
-    int missing = expected_sum - actual_sum;
-    return missing;
-}
 
+    return expected - actual;
+}
 int main() {
 
 
     return 0;
 }
+
 
 ```
 
