@@ -234,7 +234,50 @@ int main() {
 
 ```
 ## Task 6
+```cpp
+#include <iostream>
+#include <vector>
+#include <unordered_set>
+using namespace std;
 
+int find(vector<int>& nums) {
+    unordered_set<int> a;
+
+    for (int i = 0; i < nums.size(); i++) {
+        a.insert(nums[i]);
+    }
+
+    int maxLength = 0;
+
+
+    for (int i = 0; i < nums.size(); i++) {
+        int num = nums[i];
+
+        if (a.find(num - 1) == a.end()) {
+            int currentNum = num;
+            int count = 1;
+
+
+            while (a.find(currentNum + 1) != a.end()) {
+                currentNum++;
+                count++;
+            }
+
+            if (count > maxLength) {
+                maxLength = count;
+            }
+        }
+    }
+
+    return maxLength;
+}
+
+
+
+int main() {
+
+}
+```
 
 
 
