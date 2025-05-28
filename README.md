@@ -100,7 +100,49 @@ int main() {
 ```
 
 ## Task 3
+``` cpp
+#include <iostream>
+#include <vector>
+using namespace std;
 
+int find(vector<int> nums) {
+    
+    
+    
+    int minNumber;
+    int maxProfit;
+
+    if (nums[0] > nums[1]){
+        minNumber = nums[1];
+        maxProfit = nums[0] - nums[1];
+    } else {
+        minNumber = nums[0];
+        maxProfit = nums[1] - nums[0];
+    }
+
+
+
+    for (int i = 2; i < nums.size(); ++i) {
+        int currentPrice = nums[i];
+
+
+        int profit = currentPrice - minNumber;
+        if (profit > maxProfit) {
+            maxProfit = profit;
+        }
+
+        if (currentPrice < minNumber) {
+            minNumber = currentPrice;
+        }
+    }
+
+    return maxProfit;
+}
+
+int main() {
+
+}
+```
 
 
 
