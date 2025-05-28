@@ -196,6 +196,45 @@ int main() {
 }
 ```
 ## Task 5
+``` cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<double> sortTemp(vector<double>& temps) {
+
+    int count[21] = {0};
+
+
+    for (int i = 0; i < temps.size(); i++) {
+        double temp = temps[i];
+
+        int index = (temp * 10) - 970;
+        count[index] = count[index] + 1;
+    }
+
+
+    vector<double> sorted;
+    for (int i = 0; i < 21; i++) {
+        while (count[i] > 0) {
+            double value = (970 + i) / 10.0;
+            sorted.push_back(value);
+            count[i] = count[i] - 1;
+        }
+    }
+
+    return sorted;
+}
+
+
+int main() {
+
+}
+
+
+```
+## Task 6
+
 
 
 
