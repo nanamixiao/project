@@ -114,9 +114,9 @@ int main() {
 using namespace std;
 
 int find(vector<int> nums) {
-    
-    
-    
+
+
+
     int minNumber;
     int maxProfit;
 
@@ -148,7 +148,10 @@ int find(vector<int> nums) {
 }
 
 int main() {
-
+    vector<int> nums = {10, 7, 5, 8, 11, 2, 6};
+    int result = find(nums);
+    cout << "Maximum Profit is " << result << endl;
+    return 0;
 }
 ```
 
