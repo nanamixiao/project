@@ -72,6 +72,7 @@ int main() {
 ``` cpp
 
 
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -95,7 +96,11 @@ int find(vector<int> nums) {
 }
 int main() {
 
+    vector<int> nums1 = {2, 3, 0, 6, 1, 5};
+    vector<int> nums2 = {8, 2, 3, 9, 4, 7, 5, 0, 6};
 
+    cout << "The missing number is " << find(nums1) << endl;
+    cout << "The missing number is " << find(nums2) << endl;
     return 0;
 }
 
