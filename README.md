@@ -305,6 +305,12 @@ int find(vector<int>& nums) {
 
 int main() {
 
+    vector<int> nums = {10, 5, 12, 3, 55, 30, 4, 11, 2};
+    int result = find(nums);
+    
+    cout << "Longest consecutive sequence length is " << result << endl;
+
+    return 0;
 }
 ```
 
