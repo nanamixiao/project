@@ -245,7 +245,20 @@ vector<double> sortTemp(vector<double>& temps) {
 
 int main() {
 
+    vector<double> temp = {98.6, 98.0, 97.1, 99.0, 98.9, 97.8, 98.5, 98.2, 98.0, 97.1};
+
+    vector <double> sortTemp1 = sortTemp(temp);
+    for (int i = 0; i < size(temp); ++i) {
+
+        cout << sortTemp1[i]<< " ";
+
+    }
+    cout << endl;
+
+
 }
+
+
 
 
 ```
