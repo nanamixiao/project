@@ -204,6 +204,11 @@ int maxNum(vector<int>& nums) {
 
 int main() {
 
+    vector<int> nums = {5, -10, -6, 9, 4};
+
+    int result = maxNum(nums);
+    cout << "The maximum product of two number is " << result << endl;
+    return 0;
 }
 ```
 ## Task 5
